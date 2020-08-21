@@ -1,0 +1,15 @@
+[user]
+	name = coolofficials
+	email = coolofficials@gmail.com
+[alias]
+	lg = log --all --decorate --oneline --graph
+	a = add
+	co = checkout
+	cm = commit -m
+	p = push origin
+	pr = push origin riscv
+	unstage = reset HEAD --
+	df = diff
+	s = status
+	cl = clone "https://github.com/coolofficials/rv6.git"
+	ru = remote add upstream "https://github.com/kaist-cp/rv6.git"
