@@ -14,6 +14,6 @@
 - iterm
 
 # key-bindings
-control -> command
-option -> control
-command -> option
+- control -> command
+- option -> control
+- command -> option
