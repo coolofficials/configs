@@ -56,6 +56,11 @@
 - copyfile
 - zsh-autosuggestions
 - zsh-syntax-highlighting
+- fzf
+- tree
+- rlwrap
+- neovim
+- helm
 
 ### TODOS
 - kubeconfigs
