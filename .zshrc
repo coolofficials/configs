@@ -1,14 +1,21 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=/opt/homebrew/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -71,26 +78,24 @@ ZSH_THEME="agnoster"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-git
-zsh-autosuggestions
-autojump
-sudo
-web-search
-copypath
-copyfile
-history
+	git
+	autojump
+	sudo
+	web-search
+	copypath
+	copyfile
+	history
 )
 
 source $ZSH/oh-my-zsh.sh
+
 
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
+ export LANG=en_US.UTF-8
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
@@ -106,23 +111,62 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias zshconfig="code ~/.zshrc"
 alias refresh="killall zsh && exec rm "$HISTFILE" && clear && exec zsh"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias c="clear"
 alias g="git"
 alias ..="cd .."
 alias python="python3"
 alias pip="pip3"
+alias k9s-dev='k9s --context dev-blue -n prex'
+alias k9s-stg='k9s --context stg-blue -n prex'
+alias aws-login='aws sso login --sso-session aws-sso --no-browser --use-device-code'
+alias core='cd ~/workspace/prex-core'
+alias gitops='cd ~/workspace/prex-gitops'
+alias migrate='{ cd ~/workspace/prex-core/python && rye run python -m prex.migration.tools.revision --config migration/main/alembic.ini; cd -; }'
+alias ci='$(git rev-parse --show-toplevel)/tools/ci/local.sh'
 
-autoload -Uz vcs_info
-precmd() { vcs_info }
+function rebase {
+    original_branch=$(git rev-parse --abbrev-ref HEAD)
+    git checkout develop && \
+    git fetch origin && \
+    git merge origin/develop && \
+    git checkout "$original_branch"
+    git rebase develop
+}
 
-zstyle ':vcs_info:git:*' formats '%b '
-
-setopt PROMPT_SUBST
-PROMPT='%F{green}%*%f %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f$ '
-
-prompt_context() {}
-
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# kubeconfigs
+export KUBECONFIG=$KUBECONFIG:~/.kube/dev-blue.config
+
+# Added by Kandji script
+export REQUESTS_CA_BUNDLE='/opt/homebrew/etc/ca-certificates/cert.pem'
+
+eval "$(atuin init zsh)"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
+
+## Pure theme
+#PURE_PROMPT_NEWLINE_BEFORE_PROMPT=false
+#autoload -U promptinit; promptinit
+#prompt pure
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Harbor
+export HARBOR_REGISTRY_USER=developer
+export HARBOR_REGISTRY_PASSWORD='Prestolabs1!@'
+
+export CMAKE_POLICY_VERSION_MINIMUM=3.5
+
+source "$HOME/.rye/env"
+source "$HOME/.rye/env"
