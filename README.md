@@ -3,8 +3,8 @@
 - cursor
 - vs code
 - hidden bar
-- rectangle: control+option
-- altTab
+- rectangle: control+option+arrows
+- altTab: control+tab
 - karabiner
 - orbstack
 - postman
