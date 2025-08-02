@@ -1,0 +1,134 @@
+{
+    "editor.fontSize": 17,
+    "editor.fontFamily": "Comic Mono",
+    "editor.fontLigatures": true,
+    "editor.lineHeight": 27,
+    "editor.minimap.enabled": true,
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.scrollbar.vertical": "hidden",
+    "editor.lineNumbers": "on",
+    "editor.wordWrap": "on",
+    "editor.renderLineHighlight": "none",
+    "editor.overviewRulerBorder": false,
+    "editor.occurrencesHighlight": "off",
+    "workbench.editor.showTabs": "none",
+    "editor.hideCursorInOverviewRuler": true,
+    "workbench.tree.renderIndentGuides": "none",
+    "breadcrumbs.enabled": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "window.nativeTabs": true,
+    "git.enabled": true,
+    "workbench.colorCustomizations": {
+        "[Material Theme Palenight High Contrast]": {
+            "editor.background": "#040024",
+            "terminal.background": "#050213",
+            "panel.background": "#050213",
+            "titleBar.activeBackground": "#050213",
+            "titleBar.inactiveBackground": "#050213",
+            "menu.background": "#050213",
+            "sideBar.background": "#050213",
+            "sideBar.border": "#040024",
+            "editorGroup.border": "#040024"
+        },
+        "[Higher Contrast Zenburn]": {
+            "editor.background": "#080425"
+        },
+        "[One Dark Pro Darker]": {
+            "editor.background": "#121212",
+            "terminal.background": "#121212",
+            "titleBar.activeBackground": "#121212",
+            "titleBar.inactiveBackground": "#121212",
+            "menu.background": "#121212",
+            "sideBar.background": "#121212",
+            "editorGroup.border": "#121212",
+            "editorCursor.foreground": "#c0a00f",
+            "editorInlayHint.typeBackground": "#121212"
+        }
+    },
+    "editor.tokenColorCustomizations": {
+        "[Material Theme Palenight High Contrast]": {
+            "comments": "#9698a7",
+            "variables": "#fcd6d6"
+        },
+        "[Higher Contrast Zenburn]": {
+            "comments": "#9698a7"
+        },
+        "[One Dark Pro Darker]": {
+            "comments": "#87af87"
+        }
+    },
+    "editor.lightbulb.enabled": "off",
+    "editor.guides.indentation": false,
+    "editor.rulers": [
+        120
+    ],
+    "python.languageServer": "None",
+    "editor.formatOnSave": true,
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        }
+    },
+    "workbench.sideBar.location": "right",
+    "python.analysis.exclude": [
+        "**/tests/**"
+    ],
+    "python.testing.pytestEnabled": true,
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "workbench.activityBar.location": "hidden",
+    "json.format.enable": false,
+    "psi-header.changes-tracking": {
+        "autoHeader": "autoSave"
+    },
+    "psi-header.config": {
+        "author": "siwon",
+        "company": "Prex Technologies Pte. Ltd.",
+        "blankLinesAfter": 1
+    },
+    "psi-header.lang-config": [
+        {
+            "language": "proto3",
+            "begin": "",
+            "end": "",
+            "prefix": "// "
+        },
+        {
+            "language": "python",
+            "begin": "",
+            "end": "",
+            "prefix": "# "
+        },
+        {
+            "language": "rust",
+            "begin": "",
+            "end": "",
+            "prefix": "// "
+        }
+    ],
+    "psi-header.templates": [
+        {
+            "language": "*",
+            "template": [
+                "Copyright (c) <<dateformat(yyyy)>> <<company>>",
+                "Author: <<author>>"
+            ]
+        }
+    ],
+    "ruff.format.preview": true,
+    "workbench.iconTheme": "catppuccin-mocha",
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "window.customTitleBarVisibility": "never",
+    "workbench.settings.applyToAllProfiles": [
+        "editor.fontFamily"
+    ],
+    "editor.fontWeight": "normal",
+    "python.analysis.typeCheckingMode": "basic",
+    "editor.inlayHints.enabled": "on",
+    "python.pythonPath": "./prex-core/python/.venv/bin/python",
+    "python.venvPath": "./prex-core/python/.venv/",
+    "editor.minimap.autohide": true,
+}
