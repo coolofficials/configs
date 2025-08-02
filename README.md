@@ -1,4 +1,4 @@
-# applications
+### applications
 - chrome
 - cursor
 - vs code
@@ -13,12 +13,12 @@
 - commander one
 - iterm
 
-# key-bindings
+### key-bindings
 - control -> command
 - option -> control
 - command -> option
 
-# vs-code extensions
+### vs-code extensions
 - Pyright
 - Better Git Line Blame
 - Catppuccin for VSCode (catpuccin-mocha)
@@ -44,3 +44,19 @@
 - GitLens (disabled)
 - Python (by cursor.com, disabled)
 - Code Spell Check (disabled)
+
+### plugins
+- git
+- homebrew
+- autojump
+- atuin
+- history
+- web-search
+- copypath
+- copyfile
+- zsh-autosuggestions
+- zsh-syntax-highlighting
+
+### TODOS
+- kubeconfigs
+- awsconfigs
