@@ -17,3 +17,30 @@
 - control -> command
 - option -> control
 - command -> option
+
+# vs-code extensions
+- Pyright
+- Better Git Line Blame
+- Catppuccin for VSCode (catpuccin-mocha)
+- Catppuccin Icons for VSCode
+- Code Runner
+- CodeLLDB
+- CodeSnap
+- Container Tools
+- Docker
+- Error Lens
+- Gruvbox Theme
+- mirrord
+- psioniq File Header
+- Python
+- Python Debugger
+- Rainbow CSV
+- Ruff
+- rust-analyzer
+- vscode-pdf
+- vscode-pets
+- vscode-proto3
+- YAML
+- GitLens (disabled)
+- Python (by cursor.com, disabled)
+- Code Spell Check (disabled)
