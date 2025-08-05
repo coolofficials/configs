@@ -43,6 +43,9 @@
             "editorGroup.border": "#121212",
             "editorCursor.foreground": "#c0a00f",
             "editorInlayHint.typeBackground": "#121212"
+        },
+        "[Catppuccin Mocha]": {
+            "editorIndentGuide.background": "#1e1e2e"
         }
     },
     "editor.tokenColorCustomizations": {
