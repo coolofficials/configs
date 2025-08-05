@@ -46,7 +46,8 @@
             "editorInlayHint.typeBackground": "#121212"
         },
         "[Catppuccin Mocha]": {
-            "editorIndentGuide.background": "#1e1e2e"
+            "editorIndentGuide.background": "#1e1e2e",
+            "editorIndentGuide.activeBackground": "#313244"
         }
     },
     "editor.tokenColorCustomizations": {
