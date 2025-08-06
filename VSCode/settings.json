@@ -134,7 +134,7 @@
     "python.analysis.typeCheckingMode": "basic",
     "editor.inlayHints.enabled": "on",
     "python.pythonPath": "./prex-core/python/.venv/bin/python",
-    "python.venvPath": "./prex-core/python/.venv/",
+    "python.venvPath": "./prex-core/python/.venv",
     "editor.minimap.autohide": true,
     "window.openFilesInNewWindow": "on",
     "coverage-gutters.coverageBaseDir": "./prex-core/coverage",
