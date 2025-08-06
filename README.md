@@ -61,6 +61,7 @@
 - rlwrap
 - neovim
 - helm
+- micro
 
 ### TODOS
 - kubeconfigs
