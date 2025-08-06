@@ -126,7 +126,7 @@ alias aws-login="aws sso login --sso-session aws-sso --no-browser --use-device-c
 alias core="cd ~/workspace/prex-core"
 alias gitops="cd ~/workspace/prex-gitops"
 alias migrate="{ cd ~/workspace/prex-core/python && rye run python -m prex.migration.tools.revision --config migration/main/alembic.ini; cd -; }"
-alias ci="$(git rev-parse --show-toplevel)/tools/ci/local.sh"
+alias ci='$(git rev-parse --show-toplevel)/tools/ci/local.sh'
 alias mi="micro"
 
 function rebase {
