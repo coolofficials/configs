@@ -1,0 +1,12 @@
+{
+  "autoindent": true,
+  "ignorecase": true,
+  "savecursor": false,
+  "softwrap": true,
+  "statusline": false,
+  "ruler": false,
+  "autosave": false,
+  "tabsize": 2,
+  "tabstospaces": true,
+  "mouse": true
+}
