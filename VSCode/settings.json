@@ -137,4 +137,9 @@
     "python.venvPath": "./prex-core/python/.venv/",
     "editor.minimap.autohide": true,
     "window.openFilesInNewWindow": "on",
+    "coverage-gutters.coverageBaseDir": "./prex-core/python/coverage",
+    "coverage-gutters.coverageFileNames": [
+        "python-lcov-normalized.info"
+    ],
+    "coverage-gutters.showLineCoverage": true
 }
