@@ -123,7 +123,7 @@
             ]
         }
     ],
-    "ruff.format.preview": true,
+    "ruff.format.preview": false,
     "workbench.iconTheme": "catppuccin-mocha",
     "workbench.colorTheme": "Catppuccin Mocha",
     "window.customTitleBarVisibility": "never",
