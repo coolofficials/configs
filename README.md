@@ -41,6 +41,7 @@
 - vscode-pets
 - vscode-proto3
 - YAML
+- Coverage Gutters
 - GitLens (disabled)
 - Python (by cursor.com, disabled)
 - Code Spell Check (disabled)
