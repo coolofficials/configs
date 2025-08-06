@@ -170,4 +170,3 @@ export HARBOR_REGISTRY_PASSWORD='Prestolabs1!@'
 export CMAKE_POLICY_VERSION_MINIMUM=3.5
 
 source "$HOME/.rye/env"
-source "$HOME/.rye/env"
