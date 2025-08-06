@@ -120,13 +120,14 @@ alias g="git"
 alias ..="cd .."
 alias python="python3"
 alias pip="pip3"
-alias k9s-dev='k9s --context dev-blue -n prex'
-alias k9s-stg='k9s --context stg-blue -n prex'
-alias aws-login='aws sso login --sso-session aws-sso --no-browser --use-device-code'
-alias core='cd ~/workspace/prex-core'
-alias gitops='cd ~/workspace/prex-gitops'
-alias migrate='{ cd ~/workspace/prex-core/python && rye run python -m prex.migration.tools.revision --config migration/main/alembic.ini; cd -; }'
-alias ci='$(git rev-parse --show-toplevel)/tools/ci/local.sh'
+alias k9s-dev="k9s --context dev-blue -n prex"
+alias k9s-stg="k9s --context stg-blue -n prex"
+alias aws-login="aws sso login --sso-session aws-sso --no-browser --use-device-code"
+alias core="cd ~/workspace/prex-core"
+alias gitops="cd ~/workspace/prex-gitops"
+alias migrate="{ cd ~/workspace/prex-core/python && rye run python -m prex.migration.tools.revision --config migration/main/alembic.ini; cd -; }"
+alias ci="$(git rev-parse --show-toplevel)/tools/ci/local.sh"
+alias mi="micro"
 
 function rebase {
     original_branch=$(git rev-parse --abbrev-ref HEAD)
