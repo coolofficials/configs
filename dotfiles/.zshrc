@@ -128,6 +128,8 @@ alias gitops="cd ~/workspace/prex-gitops"
 alias migrate="{ cd ~/workspace/prex-core/python && rye run python -m prex.migration.tools.revision --config migration/main/alembic.ini; cd -; }"
 alias ci='$(git rev-parse --show-toplevel)/tools/ci/local.sh'
 alias mi="micro"
+alias run-format="{ cd ~/workspace/prex-core && ./tools/run_format.sh; cd -; }"
+alias run-pytest="{ cd ~/workspace/prex-core && ./tools/run_pytest.sh --coverage; cd -; }"
 
 function rebase {
     original_branch=$(git rev-parse --abbrev-ref HEAD)
