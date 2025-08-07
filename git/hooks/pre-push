@@ -1,0 +1,27 @@
+if [[ "$PRE_PUSH_HOOK" != "true" ]]; then
+  echo "[pre-push] Skipping because PRE_PUSH_HOOK is not set"
+  exit 0
+fi
+
+echo "[pre-push] Running checks..."
+
+echo "[pre-push] Running format check..."
+./tools/run_format.sh
+FORMAT_RESULT=$?
+
+if [ $FORMAT_RESULT -ne 0 ]; then
+  echo "❌ Formatting failed. Push aborted."
+  exit 1
+fi
+
+echo "[pre-push] Running tests..."
+./tools/run_pytest.sh --coverage
+PYTEST_RESULT=$?
+
+if [ $PYTEST_RESULT -ne 0 ]; then
+  echo "❌ Tests failed. Push aborted."
+  exit 1
+fi
+
+echo "✅ All checks passed. Proceeding with push..."
+exit 0
