@@ -1,5 +1,4 @@
 if [[ "$PRE_PUSH_HOOK" != "true" ]]; then
-  echo "[pre-push] Skipping because PRE_PUSH_HOOK is not set"
   exit 0
 fi
 
