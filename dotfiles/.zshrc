@@ -133,7 +133,7 @@ alias run-pytest="{ cd ~/workspace/prex-core && ./tools/run_pytest.sh --coverage
 alias checked-push='{ cd ~/workspace/prex-core && PRE_PUSH_HOOK=true git push origin $(git rev-parse --abbrev-ref HEAD); cd -; }'
 alias checked-push-f='{ cd ~/workspace/prex-core && PRE_PUSH_HOOK=true git push -f origin $(git rev-parse --abbrev-ref HEAD); cd -; }'
 alias push='{ cd ~/workspace/prex-core && git push origin $(git rev-parse --abbrev-ref HEAD); cd -; }'
-alias push-f='{ cd ~/workspace/prex-core && git push -f origin $(git rev-parse --abbrev-ref HEAD) }'
+alias push-f='{ cd ~/workspace/prex-core && git push -f origin $(git rev-parse --abbrev-ref HEAD); cd -; }'
 
 function rebase {
     original_branch=$(git rev-parse --abbrev-ref HEAD)
