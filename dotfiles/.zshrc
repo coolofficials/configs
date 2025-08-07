@@ -125,15 +125,15 @@ alias k9s-stg="k9s --context stg-blue -n prex"
 alias aws-login="aws sso login --sso-session aws-sso --no-browser --use-device-code"
 alias core="cd ~/workspace/prex-core"
 alias gitops="cd ~/workspace/prex-gitops"
-alias migrate="{ cd ~/workspace/prex-core/python && rye run python -m prex.migration.tools.revision --config migration/main/alembic.ini; cd -; }"
+alias migrate="{ cd ~/workspace/prex-core/python && rye run python -m prex.migration.tools.revision --config migration/main/alembic.ini; cd - > /dev/null; }"
 alias ci='$(git rev-parse --show-toplevel)/tools/ci/local.sh'
 alias mi="micro"
-alias run-format="{ cd ~/workspace/prex-core && ./tools/run_format.sh; cd -; }"
-alias run-pytest="{ cd ~/workspace/prex-core && ./tools/run_pytest.sh --coverage; cd -; }"
-alias checked-push='{ cd ~/workspace/prex-core && PRE_PUSH_HOOK=true git push origin $(git rev-parse --abbrev-ref HEAD); cd -; }'
-alias checked-push-f='{ cd ~/workspace/prex-core && PRE_PUSH_HOOK=true git push -f origin $(git rev-parse --abbrev-ref HEAD); cd -; }'
-alias push='{ cd ~/workspace/prex-core && git push origin $(git rev-parse --abbrev-ref HEAD); cd -; }'
-alias push-f='{ cd ~/workspace/prex-core && git push -f origin $(git rev-parse --abbrev-ref HEAD); cd -; }'
+alias run-format="{ cd ~/workspace/prex-core && ./tools/run_format.sh; cd - > /dev/null; }"
+alias run-pytest="{ cd ~/workspace/prex-core && ./tools/run_pytest.sh --coverage; cd - > /dev/null; }"
+alias checked-push='{ cd ~/workspace/prex-core && PRE_PUSH_HOOK=true git push origin $(git rev-parse --abbrev-ref HEAD); cd - > /dev/null; }'
+alias checked-push-f='{ cd ~/workspace/prex-core && PRE_PUSH_HOOK=true git push -f origin $(git rev-parse --abbrev-ref HEAD); cd - > /dev/null; }'
+alias push='{ cd ~/workspace/prex-core && git push origin $(git rev-parse --abbrev-ref HEAD); cd - > /dev/null; }'
+alias push-f='{ cd ~/workspace/prex-core && git push -f origin $(git rev-parse --abbrev-ref HEAD); cd - > /dev/null; }'
 
 function rebase {
     original_branch=$(git rev-parse --abbrev-ref HEAD)
