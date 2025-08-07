@@ -130,10 +130,10 @@ alias ci='$(git rev-parse --show-toplevel)/tools/ci/local.sh'
 alias mi="micro"
 alias run-format="{ cd ~/workspace/prex-core && ./tools/run_format.sh; cd -; }"
 alias run-pytest="{ cd ~/workspace/prex-core && ./tools/run_pytest.sh --coverage; cd -; }"
-alias checked-push='{ PRE_PUSH_HOOK=true git push origin $(git rev-parse --abbrev-ref HEAD) }'
-alias checked-push-f='{ PRE_PUSH_HOOK=true git push -f origin $(git rev-parse --abbrev-ref HEAD) }'
-alias push='{ git push origin $(git rev-parse --abbrev-ref HEAD) }'
-alias push-f='{ git push -f origin $(git rev-parse --abbrev-ref HEAD) }'
+alias checked-push='{ cd ~/workspace/prex-core && PRE_PUSH_HOOK=true git push origin $(git rev-parse --abbrev-ref HEAD); cd -; }'
+alias checked-push-f='{ cd ~/workspace/prex-core && PRE_PUSH_HOOK=true git push -f origin $(git rev-parse --abbrev-ref HEAD); cd -; }'
+alias push='{ cd ~/workspace/prex-core && git push origin $(git rev-parse --abbrev-ref HEAD); cd -; }'
+alias push-f='{ cd ~/workspace/prex-core && git push -f origin $(git rev-parse --abbrev-ref HEAD) }'
 
 function rebase {
     original_branch=$(git rev-parse --abbrev-ref HEAD)
