@@ -43,6 +43,7 @@
 - vscode-proto3
 - YAML
 - Coverage Gutters
+- Claude Code for VS Code
 - GitLens (disabled)
 - Python (by cursor.com, disabled)
 - Code Spell Check (disabled)
