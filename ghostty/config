@@ -46,9 +46,18 @@
 theme = "gruvlike"
 font-family = "MesloLGS Nerd Font"
 font-size = 15
-macos-titlebar-style = transparent
-window-decoration = none
 cursor-style = block
 cursor-style-blink = true
 shell-integration-features = no-cursor
 macos-non-native-fullscreen = true
+macos-titlebar-style = transparent
+macos-titlebar-proxy-icon = hidden
+title = " "
+fullscreen = true
+bold-is-bright = true
+
+# others
+mouse-hide-while-typing = true
+quit-after-last-window-closed = true
+auto-update = download
+
