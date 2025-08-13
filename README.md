@@ -11,7 +11,8 @@
 - slack
 - 1password
 - commander one
-- iterm
+- iterm2
+- ghostty
 
 ### key-bindings
 - control -> command
