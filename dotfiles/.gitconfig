@@ -8,19 +8,23 @@
 	cm = commit -m
 	unstage = reset HEAD --
 	df = diff
-        s = status
-        clear-branches-except = "!f() { \
-            if [ -z \"$1\" ]; then \
-                echo 'Usage: git clear-branches-except <branch>'; \
-                exit 1; \
-            fi; \
-            keep_branch=$1; \
-            branches_to_delete=$(git branch --format=\"%(refname:short)\" | grep -vE \"^(develop|${keep_branch})$\"); \
-            if [ -n \"$branches_to_delete\" ]; then \
-                echo 'Deleting the following branches:'; \
-                echo \"$branches_to_delete\"; \
-                git branch -D $branches_to_delete; \
-            else \
-                echo 'No branches to delete.'; \
-            fi; \
-        }; f"
+	s = status
+	clear-branches-except = "!f() { \
+		if [ -z \"$1\" ]; then \
+		  echo 'Usage: git clear-branches-except <branch>'; \
+		  exit 1; \
+		fi; \
+		keep_branch=$1; \
+		branches_to_delete=$(git branch --format=\"%(refname:short)\" | grep -vE \"^(develop|${keep_branch})$\"); \
+		if [ -n \"$branches_to_delete\" ]; then \
+		  echo 'Deleting the following branches:'; \
+		  echo \"$branches_to_delete\"; \
+		  git branch -D $branches_to_delete; \
+		else \
+		  echo 'No branches to delete.'; \
+		fi; \
+	}; f"
+[merge]
+	conflictstyple = diff3
+[rebase]
+	autoStash = true
