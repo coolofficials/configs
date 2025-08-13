@@ -45,6 +45,7 @@
 # customized theme
 theme = "gruvlike"
 font-family = "MesloLGS Nerd Font"
+#font-family = "Comic Mono"
 font-size = 15
 cursor-style = block
 cursor-style-blink = true
@@ -61,3 +62,4 @@ mouse-hide-while-typing = true
 quit-after-last-window-closed = true
 auto-update = download
 
+keybind = shift+enter=text:\n
