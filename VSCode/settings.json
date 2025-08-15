@@ -143,6 +143,6 @@
     ],
     "coverage-gutters.showLineCoverage": true,
     "rust-analyzer.linkedProjects": [
-        "workspace/prex-core/rust/Cargo.toml"
+        "prex-core/rust/Cargo.toml"
     ]
 }
