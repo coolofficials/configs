@@ -141,5 +141,8 @@
     "coverage-gutters.coverageFileNames": [
         "python-lcov-normalized.info"
     ],
-    "coverage-gutters.showLineCoverage": true
+    "coverage-gutters.showLineCoverage": true,
+    "rust-analyzer.linkedProjects": [
+        "workspace/prex-core/rust/Cargo.toml"
+    ]
 }
