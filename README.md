@@ -14,6 +14,9 @@
 - iterm2
 - ghostty
 
+### system preferences
+- language input methods > Automatically switch to a document's input source: on
+
 ### key-bindings
 - control -> command
 - option -> control
