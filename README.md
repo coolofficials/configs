@@ -68,6 +68,7 @@
 - neovim
 - helm
 - micro
+- deff
 
 ### TODOS
 - kubeconfigs
