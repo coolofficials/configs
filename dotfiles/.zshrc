@@ -134,6 +134,7 @@ alias checked-push='{ cd ~/workspace/prex-core && PRE_PUSH_HOOK=true git push or
 alias checked-push-f='{ cd ~/workspace/prex-core && PRE_PUSH_HOOK=true git push -f origin $(git rev-parse --abbrev-ref HEAD); cd - > /dev/null; }'
 alias push='{ cd ~/workspace/prex-core && git push origin $(git rev-parse --abbrev-ref HEAD); cd - > /dev/null; }'
 alias push-f='{ cd ~/workspace/prex-core && git push -f origin $(git rev-parse --abbrev-ref HEAD); cd - > /dev/null; }'
+alias review='deff --strategy range --base develop --include-uncommitted'
 
 function rebase {
     original_branch=$(git rev-parse --abbrev-ref HEAD)
