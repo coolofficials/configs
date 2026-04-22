@@ -120,21 +120,7 @@ alias g="git"
 alias ..="cd .."
 alias python="python3"
 alias pip="pip3"
-alias k9s-dev="k9s --context dev-blue -n prex"
-alias k9s-stg="k9s --context stg-blue -n prex"
-alias aws-login="aws sso login --sso-session aws-sso --no-browser --use-device-code"
-alias core="cd ~/workspace/prex-core"
-alias gitops="cd ~/workspace/prex-gitops"
-alias migrate="{ cd ~/workspace/prex-core/python && rye run python -m prex.migration.tools.revision --config migration/main/alembic.ini; cd - > /dev/null; }"
-alias ci='$(git rev-parse --show-toplevel)/tools/ci/local.sh'
 alias mi="micro"
-alias run-format="{ cd ~/workspace/prex-core && ./tools/run_format.sh; cd - > /dev/null; }"
-alias run-pytest="{ cd ~/workspace/prex-core && ./tools/run_pytest.sh --coverage; cd - > /dev/null; }"
-alias checked-push='{ cd ~/workspace/prex-core && PRE_PUSH_HOOK=true git push origin $(git rev-parse --abbrev-ref HEAD); cd - > /dev/null; }'
-alias checked-push-f='{ cd ~/workspace/prex-core && PRE_PUSH_HOOK=true git push -f origin $(git rev-parse --abbrev-ref HEAD); cd - > /dev/null; }'
-alias push='{ cd ~/workspace/prex-core && git push origin $(git rev-parse --abbrev-ref HEAD); cd - > /dev/null; }'
-alias push-f='{ cd ~/workspace/prex-core && git push -f origin $(git rev-parse --abbrev-ref HEAD); cd - > /dev/null; }'
-alias review='deff --strategy range --base develop --include-uncommitted'
 
 function rebase {
     original_branch=$(git rev-parse --abbrev-ref HEAD)
@@ -152,12 +138,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# kubeconfigs
-export KUBECONFIG=$KUBECONFIG:~/.kube/dev-blue.config
-
-# Added by Kandji script
-export REQUESTS_CA_BUNDLE='/opt/homebrew/etc/ca-certificates/cert.pem'
-
 eval "$(atuin init zsh)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
@@ -169,11 +149,3 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Harbor
-export HARBOR_REGISTRY_USER=developer
-export HARBOR_REGISTRY_PASSWORD='Prestolabs1!@'
-
-export CMAKE_POLICY_VERSION_MINIMUM=3.5
-
-source "$HOME/.rye/env"
